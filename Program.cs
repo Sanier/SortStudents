@@ -21,12 +21,8 @@ namespace SortStudents
 
         static string[] GetAllStudents(Classroom[] classes)
         {
-            // ???
-        }
-
-        public class Classroom
-        {
-            public List<string> Students = new List<string>();
+            var stud = classes.SelectMany(s => s.Students).ToArray();
+            return stud;
         }
     }
 }
